@@ -1,0 +1,18 @@
+# PlatformIO
+.pio/
+.piobuild/
+.pioenvs/
+.pio*
+
+# VS Code y Editor
+.vscode/
+*.log
+
+# Python (para los scripts )
+__pycache__/
+*.pyc
+*.pyo
+
+# Sistemas Operativos
+.DS_Store
+Thumbs.db
