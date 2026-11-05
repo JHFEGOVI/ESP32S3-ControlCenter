@@ -28,9 +28,11 @@ Entorno de desarrollo:
 ## Arquitectura de software
 
 ```text
+include/
+└── Config.h          # pines, tiempos, colores, tamaños y comandos
+
 src/
 ├── main.cpp          # setup() / loop(): inicialización y scheduler cooperativo
-├── Config.h          # pines, tiempos, colores, tamaños y comandos
 ├── Display/          # LovyanGFX: panel ILI9341V, backlight y sprites
 ├── Touch/            # FT6336G por I2C: lectura, filtrado y eventos táctiles
 ├── Serial/           # enlace USB CDC: tramas, parseo y comandos del host

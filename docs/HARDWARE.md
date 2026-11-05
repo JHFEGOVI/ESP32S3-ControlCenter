@@ -1,28 +1,32 @@
 # Hardware
 
-Referencia del diseño físico de ESP32S3-ControlCenter. Los valores definitivos de pines y temporización se declaran en `src/Config.h`; este documento explica el criterio detrás de cada conexión.
+Referencia del diseño físico de ESP32S3-ControlCenter. Los valores definitivos de pines y temporización se declaran en `include/Config.h`; este documento explica el criterio detrás de cada conexión.
 
 ## Resumen
 
 | Elemento | Especificación |
 | --- | --- |
 | MCU | ESP32-S3 ES3C28P, N16R8 (16 MB Flash, 8 MB PSRAM OPI) |
-| Pantalla | IPS 2.8", 240x320 px, ILI9341V, SPI |
+| Pantalla | IPS 2.8", 320x240 px (apaisada), ILI9341V, SPI |
 | Táctil | FT6336G capacitivo, I2C |
 | Almacenamiento | microSD, bus SPI compartido con la pantalla |
-| Avisos | Buzzer |
+| Avisos | Buzzer pasivo |
 | Enlace | USB CDC nativo |
 
 ## Pinout
 
 | Señal | Periférico | GPIO | Estado |
 | --- | --- | --- | --- |
-| SDA | FT6336G | 16 | Fijado |
-| SCL | FT6336G | 15 | Fijado |
-| SPI SCK / MOSI / MISO | ILI9341V y microSD | Por definir | Pendiente en `Config.h` |
-| CS pantalla | ILI9341V | Por definir | Pendiente en `Config.h` |
+| SDA | FT6336G | 16 | Confirmado |
+| SCL | FT6336G | 15 | Confirmado |
+| SPI SCLK | ILI9341V y microSD | 12 | Confirmado |
+| SPI MOSI | ILI9341V y microSD | 11 | Confirmado |
+| SPI MISO | ILI9341V y microSD | 13 | Confirmado |
+| CS pantalla | ILI9341V | 10 | Confirmado |
+| DC pantalla | ILI9341V | 46 | Confirmado |
+| RST pantalla | ILI9341V | -1 | No conectado |
+| Backlight | ILI9341V | 45 | Confirmado |
 | CS microSD | microSD | Por definir | Pendiente en `Config.h` |
-| DC / RST / BL | ILI9341V | Por definir | Pendiente en `Config.h` |
 | Buzzer | Buzzer | Por definir | Pendiente en `Config.h` |
 
 La pantalla y la tarjeta SD comparten el bus SPI. Cada dispositivo debe tener su propia línea de selección (`CS`) y el firmware no debe inicializar ambos a la vez sin liberar antes el bus.
@@ -86,6 +90,6 @@ Los patrones de notificación se definen en `src/Buzzer/`, no en los módulos qu
 
 ## Pendientes
 
-- Confirmar y documentar el pinout completo de SPI, backlight, SD y buzzer.
+- Confirmar y documentar el pin `CS` de la microSD y el pin del buzzer.
 - Medir el consumo real con pantalla encendida y acceso a SD.
 - Validar la estabilidad del bus SPI con pantalla y SD activas al mismo tiempo.
