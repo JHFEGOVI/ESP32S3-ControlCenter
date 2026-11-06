@@ -21,8 +21,8 @@ contexto.
 Orden estricto: cada casilla se valida en placa antes de pasar a la siguiente.
 
 - [ ] USB CDC estable y log de arranque.
-- [ ] Inicialización del ILI9341V y retroiluminación (backlight ON).
-- [ ] Dibujo de prueba: color, formas, texto y un sprite pequeño.
+- [x] Inicialización del ILI9341V y retroiluminación (backlight ON).
+- [x] Dibujo de prueba: color, formas, texto y un sprite pequeño.
 - [ ] Detección del FT6336G por I2C y mapeo de coordenadas a la rotación del display.
 - [ ] Montaje y lectura de la microSD (incluye arranque sin SD).
 - [ ] Buzzer con patrones básicos.

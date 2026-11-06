@@ -2,13 +2,15 @@
 
 #include <cstdint>
 
+class LGFX;
+
 class TouchManager {
 public:
-    bool inicializarTactil();
-    bool detectarToque(uint16_t& coordenadaX, uint16_t& coordenadaY);
+    explicit TouchManager(LGFX& pantalla);
+
+    bool begin();
+    bool detectarToque(uint16_t& x, uint16_t& y);
 
 private:
-    bool leerPuntoCrudo(uint16_t& xCrudo, uint16_t& yCrudo);
-
-    bool inicializado_ = false;
+    LGFX& _gfx;
 };
