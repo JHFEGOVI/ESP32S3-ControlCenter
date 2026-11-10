@@ -13,17 +13,16 @@ contexto.
 - [x] `platformio.ini` con ESP32-S3 N16R8, 16 MB flash y PSRAM OPI.
 - [x] Estructura de carpetas en `src/`.
 - [x] Documentación inicial (`docs/BUENAS_PRACTICAS.md`, `docs/HARDWARE.md`).
-- [ ] `Config.h` con el pinout definitivo (`constexpr`, agrupado por bus).
-- [ ] Esqueletos de módulos con interfaces públicas (solo `.h`, sin lógica).
+- [x] `Config.h` con el pinout definitivo (`constexpr`, agrupado por bus).
 
 ## Fase 1 - Bring-up de hardware
 
 Orden estricto: cada casilla se valida en placa antes de pasar a la siguiente.
 
-- [ ] USB CDC estable y log de arranque.
+- [x] USB CDC estable y log de arranque.
 - [x] Inicialización del ILI9341V y retroiluminación (backlight ON).
 - [x] Dibujo de prueba: color, formas, texto y un sprite pequeño.
-- [ ] Detección del FT6336G por I2C y mapeo de coordenadas a la rotación del display.
+- [x] Detección del FT6336G por I2C y mapeo de coordenadas a la rotación del display.
 - [ ] Montaje y lectura de la microSD (incluye arranque sin SD).
 - [ ] Buzzer con patrones básicos.
 - [ ] Prueba de estabilidad con todos los periféricos activos.
