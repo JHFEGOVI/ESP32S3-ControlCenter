@@ -23,7 +23,7 @@ Orden estricto: cada casilla se valida en placa antes de pasar a la siguiente.
 - [x] Inicialización del ILI9341V y retroiluminación (backlight ON).
 - [x] Dibujo de prueba: color, formas, texto y un sprite pequeño.
 - [x] Detección del FT6336G por I2C y mapeo de coordenadas a la rotación del display.
-- [ ] Montaje y lectura de la microSD (incluye arranque sin SD).
+- [x] Montaje y lectura de la microSD (incluye arranque sin SD).
 - [ ] Buzzer con patrones básicos.
 - [ ] Prueba de estabilidad con todos los periféricos activos.
 
