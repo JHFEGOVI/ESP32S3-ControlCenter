@@ -24,8 +24,7 @@ Orden estricto: cada casilla se valida en placa antes de pasar a la siguiente.
 - [x] Dibujo de prueba: color, formas, texto y un sprite pequeño.
 - [x] Detección del FT6336G por I2C y mapeo de coordenadas a la rotación del display.
 - [x] Montaje y lectura de la microSD (incluye arranque sin SD).
-- [ ] Buzzer con patrones básicos.
-- [ ] Prueba de estabilidad con todos los periféricos activos.
+- [ ] Prueba de estabilidad con pantalla, táctil y SD activos.
 
 ## Fase 2 - Framework de UI
 
@@ -72,6 +71,7 @@ No bloquea el proyecto. Se hace solo si apetece y hay tiempo.
 - [ ] Pruebas prolongadas de memoria y estabilidad (24–72 h).
 - [ ] Perfilado de consumo (requiere instrumentación externa).
 - [ ] FreeRTOS para tareas concurrentes si el `loop()` se queda corto.
+- [ ] Buzzer externo en GPIO libre (IO2, IO3, IO14 o IO21) o audio por códec ES8311. No bloquea el proyecto.
 
 ## Fuera de alcance por ahora
 
