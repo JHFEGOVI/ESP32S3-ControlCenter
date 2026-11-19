@@ -7,7 +7,7 @@ Un roadmap de hobby es una brújula, no un contrato. Se revisa cada 4–6 semana
 y se ajusta sin culpa. Solo se mira la fase actual y la siguiente; el resto es
 contexto.
 
-## Fase 0 - Base
+## Fase 0 - Base (FINALIZADA)
 
 - [x] Repositorio y licencia MIT.
 - [x] `platformio.ini` con ESP32-S3 N16R8, 16 MB flash y PSRAM OPI.

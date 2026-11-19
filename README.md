@@ -23,7 +23,9 @@ Entorno de desarrollo:
 - VS Code con la extensión de PlatformIO.
 - Framework Arduino.
 - LovyanGFX `^1.1.12` para el manejo gráfico.
-- Placa PlatformIO `esp32-s3-devkitc-1`, flash de 16 MB, memoria `qio_opi` y `ARDUINO_USB_CDC_ON_BOOT=1`.
+- Placa PlatformIO `esp32-s3-devkitc1-n16r8`, flash de 16 MB, memoria `qio_opi` y `ARDUINO_USB_CDC_ON_BOOT=1`.
+
+La configuración de PlatformIO usa un board personalizado (`boards/esp32-s3-devkitc1-n16r8.json`) que declara explícitamente 16 MB de flash QIO y 8 MB de PSRAM OPI, en lugar de la definición genérica `esp32-s3-devkitc-1` que asume N8 sin PSRAM.
 
 ## Arquitectura de software
 

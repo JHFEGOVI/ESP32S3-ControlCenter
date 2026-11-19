@@ -13,6 +13,10 @@ Referencia del diseño físico de ESP32S3-ControlCenter. Los valores definitivos
 | Avisos | Buzzer externo opcional; audio por códec ES8311 + FM8002E |
 | Enlace | USB CDC nativo |
 
+## Placa y entorno de compilación
+
+La configuración de PlatformIO usa un board personalizado (`boards/esp32-s3-devkitc1-n16r8.json`) que declara explícitamente 16 MB de flash QIO y 8 MB de PSRAM OPI, en lugar de la definición genérica `esp32-s3-devkitc-1` que asume N8 sin PSRAM.
+
 ## Pinout
 
 | Señal | Periférico | GPIO | Estado |
